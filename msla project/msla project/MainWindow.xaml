@@ -6,7 +6,12 @@
         xmlns:local="clr-namespace:msla_project"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
-    <Grid>
-        
+    <Grid Background="#FF9E3737">
+        <InkCanvas HorizontalAlignment="Left" Height="346.408" Margin="10,10,0,0" VerticalAlignment="Top" Width="558.969"/>
+        <Button x:Name="addframe" Content="+" HorizontalAlignment="Left" Height="111.996" Margin="604.408,44.636,0,0" VerticalAlignment="Top" Width="127.13" FontSize="72" MouseUp="Add_frame"/>
+        <ListBox HorizontalAlignment="Left" Height="173.542" Margin="637.705,182.866,0,0" VerticalAlignment="Top" Width="74.663">
+            <Button Height="17.117" Width="64.663"/>
+            <Button Height="17.117" Width="64.663"/>
+        </ListBox>
     </Grid>
 </Window>

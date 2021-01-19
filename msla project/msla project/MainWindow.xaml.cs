@@ -24,5 +24,10 @@ namespace msla_project
         {
             InitializeComponent();
         }
+
+        private void Add_frame(object sender, MouseButtonEventArgs e)
+        {
+
+        }
     }
 }
