@@ -52,7 +52,7 @@ namespace msla_project
                     Width = mainFrame.Width, // определяет высоту картинки как высоту нашего холста, чтобы подогнать ее по его размерам (по ширине)
                     Source = new BitmapImage(new Uri(filename)) // ну собсвенно путь к картинке вбивается
                 };
-
+                mainFrame.Height = image.Height; // адаптируем высоту хоста под высоту картинки
                 mainFrame.Children.Add(image); // ставиться картинка. Как написали бы ребята из Apple -- магия
                 //using (FileStream fs = new FileStream(openFileDialog.FileName, FileMode.OpenOrCreate)) // оставь пусть будет пока что
                 //{}
