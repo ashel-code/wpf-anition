@@ -7,7 +7,8 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid Background="#FFCECECE">
-        <InkCanvas x:Name="mainFrame" HorizontalAlignment="Left" Height="346" Margin="10,56,0,0" VerticalAlignment="Top" Width="559"/>
-        <Button x:Name="openButton" Content="open" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Width="75" Click="openButton_Click"/>
+        <InkCanvas x:Name="mainFrame" HorizontalAlignment="Left" Height="346" Margin="90,10,0,0" VerticalAlignment="Top" Width="693"/>
+        <Button x:Name="openButton" Content="open" HorizontalAlignment="Left" Margin="10,36,0,0" VerticalAlignment="Top" Width="75" Click="openButton_Click"/>
+        <Button x:Name="saveButton" Content="save" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Width="75" Click="saveButton_Click"/>
     </Grid>
 </Window>

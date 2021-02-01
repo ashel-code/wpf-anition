@@ -59,6 +59,39 @@ namespace msla_project
             }
         }
 
+        void saveFrame()
+        {
+            string path = "F:\\file.jpg";
+            double
+                x1 = mainFrame.Margin.Left,
+                x2 = mainFrame.Margin.Top,
+                x3 = mainFrame.Margin.Right,
+                x4 = mainFrame.Margin.Bottom;
+
+            if (path == null) return;
+
+            mainFrame.Margin = new Thickness(0, 0, 0, 0);
+
+            Size size = new Size(mainFrame.Width, mainFrame.Height);
+            mainFrame.Measure(size);
+            mainFrame.Arrange(new Rect(size));
+
+            RenderTargetBitmap renderBitmap =
+             new RenderTargetBitmap(
+               (int)size.Width,
+               (int)size.Height,
+               96,
+               96,
+               PixelFormats.Default);
+            renderBitmap.Render(mainFrame);
+            using (FileStream fs = File.Open(path, FileMode.Create))
+            {
+                JpegBitmapEncoder encoder = new JpegBitmapEncoder();
+                encoder.Frames.Add(BitmapFrame.Create(renderBitmap));
+                encoder.Save(fs);
+            }
+            mainFrame.Margin = new Thickness(x1, x2, x3, x4);
+        }
 
         public MainWindow()
         {
@@ -70,6 +103,11 @@ namespace msla_project
         {
             openImage();
 
+        }
+
+        private void saveButton_Click(object sender, RoutedEventArgs e)
+        {
+            saveFrame();
         }
     }
 }
